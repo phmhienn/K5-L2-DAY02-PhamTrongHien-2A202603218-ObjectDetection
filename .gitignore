@@ -1,16 +1,53 @@
-# Dữ liệu chỉ dành cho giảng viên và nhãn chuẩn được phát sau khi khóa bài.
+# ==============================================================================
+
+# Dữ liệu giảng viên và nhãn chuẩn (TUYỆT ĐỐI KHÔNG COMMIT)
 instructor/
 gold_train_labels/
 gold_train_labels.zip
 
-# Nhãn học viên trong dataset/labels/train/ phải được commit khi nộp bài.
-
-# Kết quả local/Colab không mặc định đưa lên Git; nộp theo hướng dẫn giảng viên.
-outputs/
-*.zip
-# Không commit checkpoint .pt, kể cả khi nằm trong report/individual/assets.
+# Model checkpoints & weights (kể cả trong report/individual/assets/)
 *.pt
-__pycache__/
+*.pth
+*.onnx
+*.engine
+weights/
 
-# macOS
+# File nén zip / tar
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# outputs/: Bỏ qua log/zip tạm thời, nhưng cho phép track annotation_evaluation.json
+outputs/*
+!outputs/annotation_evaluation.json
+
+# Thư mục tạm khi chạy notebook local / Colab
+notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+notebooks/Day2-Lab/
+notebooks/runs/
+runs/
+
+# Python cache & virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE & Editor config
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Hệ điều hành
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Credentials
+*.log
+.env
